@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>css</title>
+        <style media="screen">
+            p[class~="color"] { font-style: italic; } /*공백으로 구분한 ""단어가 포함되는 요소 선택 , 나머지 3개는 공백으로 구분할 필요x*/
+            p[class^="color"] { font-style: italic; } /*""로 시작하는 요소*/
+            p[class$="color"] { font-style: italic; } /*""로 끝나는 요소*/
+            p[class*="color"] { font-style: italic; } /*""가 포함되는 요소*/
+        </style>
+    </head>
+    <body>
+        <p class="color hot">red</p> <!-- ~=,^=,*= -->
+        <p class="cool color">blue</p> <!-- ~=,$=,*= -->
+        <p class="colorful nature">rainbow</p> <!-- ^=,*= -->
+</html>
